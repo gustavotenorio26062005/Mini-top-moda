@@ -1,0 +1,28 @@
+
+.navbar-fixed-top .container{
+  width: 940px;
+}
+
+.navbar {
+ 
+  *position: relative;
+  *z-index: 2;
+  margin-bottom: 20px;
+  overflow: visible;
+  background-color:#000000;
+}
+
+.navbar-inner:before,
+.navbar-inner:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.navbar-inner:after {
+  clear: both;
+}
+
+.navbar .container {
+  width: auto;
+}

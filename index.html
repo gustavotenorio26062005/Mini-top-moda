@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta content="Atacado e Varejo - Moda Masculina e Feminina" name="description">
+
+  <title>TOP MODA Jeans</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrapmenu.css">  
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/jquery-3.6.4.js" ></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var correio =  $('#formulario :input[name="mail"]');
+      $("#enviar").on('click', function (e) {
+        if($("#nome").val() == "")
+        {
+          alert("O campo nome é obrigatório !"); 
+          $("#nome").css({"border" : "2px solid #F00", "padding": "2px"});
+          e.preventDefault();
+        }
+        else if($("#dianasc").val() == "")
+        {
+          alert("Entre com sua data de nascimento !"); 
+          $("#dianasc").css({"border" : "2px solid #F00", "padding": "2px"});
+          e.preventDefault();
+        }
+        else if(correio.val() == "")
+        {
+          alert("Entre com seu email !"); 
+          $("#mail").css({"border" : "2px solid #F00", "padding": "2px"});
+          e.preventDefault();
+        }
+        else if(correio.val().indexOf('@') == -1 || correio.val().indexOf('.') < 0)
+        {
+          alert("Digite um email válido !");
+          $("#mail").css({"border" : "2px solid #F00", "padding": "2px"});
+          e.preventDefault();
+        }
+        else
+        {
+          alert("Obrigado pelo contato, aguarde nosso retorno !");
+          $("#formulario").submit();
+        }
+	    });
+    });
+  </script>
+  
+  <script language="javascript">
+    function valid(){
+			window.alert("Mensagem Enviada. Aguarde nosso retorno !");
+			return true;
+		}
+  </script>
+</head>
+<body style="background-color:#C59F66;">
+  <article class="panel" id="topo"></article>
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <br><br><br>
+  <div class="container">
+    <div align="center">
+		  <div class="navbar navbar-fixed-top">	  	
+    		<div class="container ">
+			    <header class="nav">
+            <nav>
+        		  <ul class="nav">
+          			<li><a href="#contatos">Contatos</a></li>
+        		  </ul>	
+			      </nav>
+          </header>
+        </div>
+		  </div>
+	  </div>
+
+    <!-- Boas Vindas -->
+    <section class="tm-welcome">
+      <div class="tm-welcome-left">
+        <!-- Logo -->
+        <div class="tm-logo">
+          <h1 class="tm-site-name"></h1>
+        </div>
+        <div class="tm-welcome-content">
+          <!-- fa icons -->
+		      <div class="boxVideo">
+		        <iframe width="460" height="315" src="TopModaJeans.mp4" frameborder="0" allow="accelerometer" autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		      </div>
+        </div>
+      </div>
+      <div class="tm-welcome-right"></div>
+    </section>
+
+    <div class="tm-bar-2"></div>	
+
+    <section class="row">
+      <div class="col-md-7 d-flex tm-contact-left-col">
+        <div class="tm-bg-secondary tm-contact-left">
+          <div class="tm-contact-left-inner">
+            <h3 class="text-center tm-mb-40 tm-contact-header">
+              <article class="panel" id="contatos"><br>Contatos</article>
+            </h3>
+            <div align="center">
+              <p class="tm-line-height-2 mb-5">Preencha nosso formulário</p>
+              <a href="https://www.instagram.com/top.modajeans/" target="_blank"><img src="img/instagram.png"></a>
+		  	      <a href="http://api.whatsapp.com/send?l=pt&phone=5511949835208" target="_blank"><img src="img/wapp.png"></a>
+              <div class="mb-2 tm-font-normal">
+                <a href="#" class="tm-contact-link">e-mail</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <form action="index.html" method="post" enctype="multipart/form-data" class="tm-contact-form" id="formulario">
+            <div class="form-group mb-4">
+              <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome"/>
+            </div>
+		        <div class="form-group mb-4">
+              <input type="date" id="dianasc" name="dianasc" class="form-control" placeholder="Nascimento"/>
+            </div>
+            <div class="form-group mb-4">
+              <input type="email" id="mail" name="mail" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group mb-4">
+              <textarea rows="6" id="menssagem" name="menssagem" class="form-control" placeholder="Menssagem"></textarea>
+            </div>
+            <div class="form-group mb-0">
+              <button type="submit" class="btn btn-primary tm-btn-round tm-fl-right" id="enviar">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div><!-- container -->
+</body>
+</html>
